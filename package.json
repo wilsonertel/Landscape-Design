@@ -1,0 +1,25 @@
+{
+  "name": "landscape-design",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Professional web-based landscape design studio, pre-loaded with the surveyed site at 3610 Creekstone Court, McKinney, TX",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}
