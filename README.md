@@ -7,11 +7,28 @@ Everything is drawn to scale in real feet on top of the boundary survey, so the
 plan you produce carries the actual dimensions of the lot rather than a sketch
 that happens to look about right.
 
+## Opening it
+
+**No install — one file.** `dist/landscape-studio.html` is a single self-contained
+HTML file. Download it and double-click; it opens in any browser with no server
+and no dependencies. Rebuild it with:
+
 ```bash
 npm install
-npm run dev      # http://127.0.0.1:5173
-npm run build    # typecheck + production bundle into dist/
+npm run build:single    # -> dist/landscape-studio.html (~330 KB)
 ```
+
+**Development.**
+
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # typecheck + production bundle into dist/
+```
+
+Note that `dist/index.html` from a plain `npm run build` will *not* open by
+double-clicking — browsers block module scripts over `file://` as a
+cross-origin request. That is exactly what `build:single` exists to solve.
 
 No backend, no accounts, no network calls. Work is saved to `localStorage` as you
 go, and can be exported to a file.
